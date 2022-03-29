@@ -3,7 +3,7 @@ import React from 'react'
 export const Navbar = (props) => {
     return (
 
-        <nav className={`navbar navbar-expand-lg  navbar-${props.mode == 'dark' ? 'light' : 'dark'} bg-${props.mode == 'dark' ? 'light' : 'dark'} text-${props.mode == 'dark' ? 'dark' : 'light'}`}>
+        <nav className={`navbar navbar-expand-lg fixed-top navbar-${props.mode === 'dark' ? 'light' : 'dark'} bg-${props.mode === 'dark' ? 'light' : 'dark'} text-${props.mode === 'dark' ? 'dark' : 'light'}`}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">ShopKart</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

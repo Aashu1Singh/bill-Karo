@@ -1,27 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import AddProduct from './AddProduct'
 import { Footer } from './Footer'
 import { Product } from './Product'
 export const ProductList = (props) => {
 
-    let product = [{
-        name: "Cake",
-        price: 50,
-        quantity: 0,
-
-    },
-    {
-        name: "Shampoo",
-        price: 5,
-        quantity: 0,
-
-    },
-    {
-        name: "Pencil",
-        price: 15,
-        quantity: 0,
-
-    }]
+    let product = []
     let [productItem, setProductItem] = useState(product)
     const [totalAmount, setTotalAmount] = useState(0);
 
@@ -90,12 +73,28 @@ export const ProductList = (props) => {
             </div>
             <AddProduct addItem={addItem} mode={props.mode} />
             <hr style={{ color: props.mode === 'dark' ? 'white' : 'black' }} />
-            {productItem.length > 0 ? <h2 className='my-3 text-center' style={{ color: props.mode === 'dark' ? 'white' : 'black' }} > Items you purchased</h2> : <div className="container text-center" style={{ color: props.mode === 'dark' ? 'white' : 'black' }} ><h2>Bag is empty</h2></div>}
+            {productItem.length > 0 ? <h2 className='my-3 text-center' style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: '#d0c0c059' }} > Items you purchased</h2> : <div className="container text-center" style={{ color: props.mode === 'dark' ? 'white' : 'black' }} >
+                <div className="container my-4">
+                </div>
+                {/* <div className="container justify-center mx-1 btn btn-dark"  style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: '#d0c0c059' }}> */}
+                    <h1>YOUR BAG IS EMPTY</h1>
+                {/* </div> */}
+                {/* style={{marginTop: "205px"}} */}
+                <div className="container text-center fixed-bottom my-1" >
+                    <div className="card" >
+                        <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059' }}>
+                            <h2 className="card-title"><b>ShopKart</b></h2>
+                            <p className=" card-text my-1">~Aashu Singh</p>
+                            <p className=" card-text my-1"><strong>Thank You for visiting</strong> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>}
             {productItem.length > 0 ? <div className="row my-2" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
-                <div className="col-md-1 ">Sno</div>
-                <div className="col-md-3 ">Items</div>
-                <div className="col-md-3 ">Qantity</div>
-                <div className="col-md-3 ">Total </div>
+                <div className="col-1 "><strong>Sno</strong> </div>
+                <div className="col-2 mx-2"><strong>Items</strong> </div>
+                <div className="col-4 text-center "><strong >Qantity</strong></div>
+                <div className="col-3 "><strong>Total</strong> </div>
             </div> : ""}
             {productItem.map((product, i) => {
                 return <Product product={product} key={i} addItem={addItem} removeItem={removeItem} increaseQnty={increaseQnty} decreaseQnty={decreaseQnty} index={i} mode={props.mode} />
