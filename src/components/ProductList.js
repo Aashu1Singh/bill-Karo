@@ -81,7 +81,7 @@ export const ProductList = (props) => {
                 {/* </div> */}
                 {/* style={{marginTop: "205px"}} */}
                 <div className="container text-center my-1" >
-                    <div className="card" style={{marginTop: "80px"}} >
+                    <div className="card" style={{marginTop: "50px"}} >
                         <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059' }}>
                             <h2 className="card-title"><b>ShopKart</b></h2>
                             <p className=" card-text my-1">~Aashu Singh</p>
@@ -92,9 +92,9 @@ export const ProductList = (props) => {
             </div>}
             {productItem.length > 0 ? <div className="row my-2" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
                 <div className="col-1 "><strong>Sno</strong> </div>
-                <div className="col-2 mx-2"><strong>Items</strong> </div>
-                <div className="col-4 text-center "><strong >Qantity</strong></div>
-                <div className="col-3 "><strong>Total</strong> </div>
+                <div className="col-3"><strong>Items</strong> </div>
+                <div className="col-4 "><strong >Qantity</strong></div>
+                <div className="col-3 mx-3 "><strong>Total</strong> </div>
             </div> : ""}
             {productItem.map((product, i) => {
                 return <Product product={product} key={i} addItem={addItem} removeItem={removeItem} increaseQnty={increaseQnty} decreaseQnty={decreaseQnty} index={i} mode={props.mode} />
