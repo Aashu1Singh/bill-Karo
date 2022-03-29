@@ -76,10 +76,7 @@ export const ProductList = (props) => {
             {productItem.length > 0 ? <h2 className='my-3 text-center' style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: '#d0c0c059' }} > Items you purchased</h2> : <div className="container text-center" style={{ color: props.mode === 'dark' ? 'white' : 'black' }} >
                 <div className="container my-4">
                 </div>
-                {/* <div className="container justify-center mx-1 btn btn-dark"  style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: '#d0c0c059' }}> */}
                     <h1 style={{marginTop: "100px"}} >YOUR BAG IS EMPTY</h1>
-                {/* </div> */}
-                {/* style={{marginTop: "205px"}} */}
                 <div className="container text-center my-1" >
                     <div className="card" style={{marginTop: "50px"}} >
                         <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059' }}>
@@ -92,9 +89,9 @@ export const ProductList = (props) => {
             </div>}
             {productItem.length > 0 ? <div className="row my-2" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
                 <div className="col-1 "><strong>Sno</strong> </div>
-                <div className="col-3"><strong>Items</strong> </div>
+                <div className="col-3 mx-1"><strong>Items</strong> </div>
                 <div className="col-4 "><strong >Qantity</strong></div>
-                <div className="col-3 mx-3 "><strong>Total</strong> </div>
+                <div className="col-2 mx-1 "><strong>Total</strong> </div>
             </div> : ""}
             {productItem.map((product, i) => {
                 return <Product product={product} key={i} addItem={addItem} removeItem={removeItem} increaseQnty={increaseQnty} decreaseQnty={decreaseQnty} index={i} mode={props.mode} />
