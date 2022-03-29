@@ -77,11 +77,11 @@ export const ProductList = (props) => {
                 <div className="container my-4">
                 </div>
                 {/* <div className="container justify-center mx-1 btn btn-dark"  style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: '#d0c0c059' }}> */}
-                    <h1>YOUR BAG IS EMPTY</h1>
+                    <h1 style={{marginTop: "100px"}} >YOUR BAG IS EMPTY</h1>
                 {/* </div> */}
                 {/* style={{marginTop: "205px"}} */}
-                <div className="container text-center fixed-bottom my-1" >
-                    <div className="card" >
+                <div className="container text-center my-1" >
+                    <div className="card" style={{marginTop: "80px"}} >
                         <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059' }}>
                             <h2 className="card-title"><b>ShopKart</b></h2>
                             <p className=" card-text my-1">~Aashu Singh</p>
