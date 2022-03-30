@@ -20,7 +20,7 @@ export const Product = (props) => {
                 <div className="col-2 align-self-center" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
                     <button className="btn btn-success">{props.product.quantity * props.product.price}</button>
                 </div>
-                <div className="col-1 mx-1 align-self-center" style={{padding: "26px"}}>
+                <div className="col-1 mx-1 align-self-center" style={{padding: "22px"}}>
                 <i class="fa-solid fa-circle-minus" onClick={() => { props.removeItem(props.index) }}></i>
                 </div>
             </div>
