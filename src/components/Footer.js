@@ -8,7 +8,7 @@ export const Footer = (props) => {
                     <div className="card-body" >
                         <h5 className="card-title"><b>Total amount to be paid</b></h5>
                         <p className="card-text">{props.totalAmount}</p>
-                        <a className="btn btn-warning mx-2 my-1" onClick={() => { props.reset() }}><strong style={{ color: "black" }}>Reset Total Amount</strong> </a>
+                        <a className="btn btn-warning mx-2 my-1" onClick={() => { props.reset() }}><strong style={{ color: "black" }}>Reset Quantity</strong> </a>
                         <a className="btn btn-success mx-2 my-1">Pay Now</a>
                     </div>
                     {/* </div> */}

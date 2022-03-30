@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+#root{
+    /* background-color:#F7F5F2; */
+    height: 100vh;
+}
