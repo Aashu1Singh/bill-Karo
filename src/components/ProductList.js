@@ -16,6 +16,7 @@ export const ProductList = (props) => {
         setTotalAmount(newTotalAmount)
         setProductItem(newProducts);
         props.showAlert("Quantity increased by 1", "success")
+        // console.log(newProducts);
     }
     const decreaseQnty = (index) => {
         let newProducts = [...productItem];
@@ -39,6 +40,8 @@ export const ProductList = (props) => {
         props.showAlert("All quantities reset", "success")
     }
     const removeItem = (index) => {
+        // console.log("item removed", index);
+
         let newProducts = [...productItem];
         let newTotalAmount = totalAmount;
         newProducts.splice(index, 1);
@@ -50,37 +53,44 @@ export const ProductList = (props) => {
         })
         setTotalAmount(newTotalAmount)
         props.showAlert("Item removed successfully", "danger")
+        // console.log(newProducts);
     }
-    const addItem = (name, price) => {
+    const addItem = (name, price, quantity) => {
         let newProducts = [...productItem];
+        let newTotalAmount = totalAmount;
         if (newProducts == null) {
             newProducts = []
         } else {
             newProducts.push({
                 name: name,
                 price: price,
-                quantity: 0
+                quantity: quantity
             })
         }
         setProductItem(newProducts);
+        newTotalAmount = 0;
+        newProducts.forEach((index) => {
+            newTotalAmount += (index.price * index.quantity);
+        })
+        setTotalAmount(newTotalAmount)
         props.showAlert("Item added successfully", "success")
     }
 
     return (
         <>
-            <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : 'black',backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059', }} >
+            <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059', }} >
                 <h1 className='text-center' style={{ color: props.mode === 'dark' ? 'white' : 'black', padding: "5px" }} >ADD ITEM IN YOUR BAG</h1>
             </div>
             <AddProduct addItem={addItem} mode={props.mode} />
             <div className=" align-self-center ">
-            <hr style={{ color: props.mode === 'dark' ? 'white' : 'black',}} className='mx-1 hrElement'/>
+                <hr style={{ color: props.mode === 'dark' ? 'white' : 'black', }} className='mx-1 hrElement' />
             </div>
             {productItem.length > 0 ? <h2 className='my-3 text-center' style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059', padding: "8px" }} > Items you purchased</h2> : <div className="container text-center" style={{ color: props.mode === 'dark' ? 'white' : 'black' }} >
                 <div className="container my-4">
                 </div>
-                    <h1 style={{marginTop: "50px"}} >YOUR BAG IS EMPTY</h1>
+                <h1 style={{ marginTop: "50px" }} >YOUR BAG IS EMPTY</h1>
                 <div className="container text-center my-1" >
-                    <div className="card" style={{marginTop: "40px"}} >
+                    <div className="card" style={{ marginTop: "40px" }} >
                         <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059' }}>
                             <h2 className="card-title"><b>ShopKart</b></h2>
                             <p className=" card-text my-1">~Aashu Singh</p>
@@ -90,8 +100,8 @@ export const ProductList = (props) => {
                 </div>
             </div>}
             {productItem.length > 0 ? <div className="row my-2 mx-2" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
-                <div className="col-1 align-self-center " style={{padding : "1px"}}><strong>Sno</strong> </div>
-                <div className="col-3 mx-1"><strong>Items</strong> </div>
+                <div className="col-1 align-self-center " style={{ padding: "1px" }}><strong>Sno</strong> </div>
+                <div className="col-3 mx-1"><strong>Item</strong> </div>
                 <div className="col-4 "><strong >Qantity</strong></div>
                 <div className="col-2 mx-1 "><strong>Total</strong> </div>
             </div> : ""}
