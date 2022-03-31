@@ -72,7 +72,9 @@ export const ProductList = (props) => {
                 <h1 className='text-center' style={{ color: props.mode === 'dark' ? 'white' : 'black', padding: "5px" }} >ADD ITEM IN YOUR BAG</h1>
             </div>
             <AddProduct addItem={addItem} mode={props.mode} />
-            <hr style={{ color: props.mode === 'dark' ? 'white' : 'black' }} className='mx-1'/>
+            <div className=" align-self-center ">
+            <hr style={{ color: props.mode === 'dark' ? 'white' : 'black',}} className='mx-1 hrElement'/>
+            </div>
             {productItem.length > 0 ? <h2 className='my-3 text-center' style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059', padding: "8px" }} > Items you purchased</h2> : <div className="container text-center" style={{ color: props.mode === 'dark' ? 'white' : 'black' }} >
                 <div className="container my-4">
                 </div>
@@ -87,8 +89,8 @@ export const ProductList = (props) => {
                     </div>
                 </div>
             </div>}
-            {productItem.length > 0 ? <div className="row my-2" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
-                <div className="col-1 " style={{padding : "7px"}}><strong>Sno</strong> </div>
+            {productItem.length > 0 ? <div className="row my-2 mx-2" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
+                <div className="col-1 align-self-center " style={{padding : "1px"}}><strong>Sno</strong> </div>
                 <div className="col-3 mx-1"><strong>Items</strong> </div>
                 <div className="col-4 "><strong >Qantity</strong></div>
                 <div className="col-2 mx-1 "><strong>Total</strong> </div>

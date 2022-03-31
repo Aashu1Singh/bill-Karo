@@ -8,7 +8,7 @@ export const Product = (props) => {
                     <span className="badge rounded-pill bg-primary">{props.index + 1}</span>
                 </div>
                 <div className="col-3 align-self-center"style={{padding: "0px", margin:"2px"}} >
-                    <h5>{props.product.name}<span className='badge bg-secondary my-2 ml-3 mx-2'>₹{props.product.price}</span></h5>
+                   <strong> <h6 style={{marginLeft: "15px"}}>{props.product.name}<span className='badge bg-secondary my-2 ml-3 ' style={{marginLeft: "5px"}}>₹{props.product.price}</span></h6></strong>
                 </div>
                 <div className="col-4 align-self-center" style={{padding: "0px"}}>
                     <div className="btn-group" role="group" aria-label="Basic mixed styles example">
@@ -20,8 +20,10 @@ export const Product = (props) => {
                 <div className="col-2 align-self-center" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
                     <button className="btn btn-success">{props.product.quantity * props.product.price}</button>
                 </div>
-                <div className="col-1 mx-1 align-self-center" style={{padding: "22px"}}>
-                <i class="fa-solid fa-circle-minus" onClick={() => { props.removeItem(props.index) }}></i>
+                <div className="col-1 mx-1 align-self-center" style={{padding: "18px"}}>
+                {/* <FontAwesomeIcon icon="fa-regular fa-circle-trash" onClick={() => { props.removeItem(props.index) }}/> */}
+                {/* <i class="fa-solid fa-shield-xmark"  ></i> */}
+                <i class="fa-solid fa-circle-minus fa-2x"></i>
                 </div>
             </div>
         </>
