@@ -3,10 +3,11 @@ import { Navbar } from './components/Navbar';
 import { ProductList } from './components/ProductList';
 import React, { useState, useEffect } from 'react';
 import Alert from './components/Alert';
+import NavHr from './components/NavHr';
 
 function App() {
   useEffect(() => {
-    document.body.style.backgroundColor = '#F7F5F2'
+    document.body.style.backgroundColor = '#FFEDDB'
   }, [])
   
   const toggleMode = () => {
@@ -15,7 +16,7 @@ function App() {
       setMode('dark')
       setBtnText('Disable dark Mode');
       showAlert("Dark mode has been enabled", "success")
-      document.body.style.backgroundColor = '#042743'
+      document.body.style.backgroundColor = '#C3E5AE'
     } else {
       setMode('light')
       setBtnText('Enable dark Mode')
@@ -40,7 +41,7 @@ function App() {
     <>
       <Navbar toggleMode={toggleMode} mode={mode} btnText={btnText} />
       <Alert alert={alert} />
-      <main className="container my-5">
+      <main className="container ">
         <ProductList mode={mode} showAlert={showAlert} />
       </main>
     </>

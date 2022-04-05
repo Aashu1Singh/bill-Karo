@@ -78,29 +78,29 @@ export const ProductList = (props) => {
 
     return (
         <>
-            <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059', }} >
-                <h1 className='text-center' style={{ color: props.mode === 'dark' ? 'white' : 'black', padding: "5px" }} >ADD ITEM IN YOUR BAG</h1>
+            <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : 'black',  }} >
+                <h1 className='text-center' id='add-Title' style={{ color: props.mode === 'dark' ? 'white' : 'black', padding: "15px" }} >Add item in your bag</h1>
             </div>
             <AddProduct addItem={addItem} mode={props.mode} />
             <div className=" align-self-center ">
                 <hr style={{ color: props.mode === 'dark' ? 'white' : 'black', }} className='mx-1 hrElement' />
             </div>
-            {productItem.length > 0 ? <h2 className='my-3 text-center' style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059', padding: "8px" }} > Items you purchased</h2> : <div className="container text-center" style={{ color: props.mode === 'dark' ? 'white' : 'black' }} >
+            {productItem.length > 0 ? <h2 className='my-4 text-center' style={{ color: props.mode === 'dark' ? 'white' : 'black',  padding: "8px", fontSize: "2.5rem" }} > Items you purchased</h2> : <div className="container text-center" style={{ color: props.mode === 'dark' ? 'white' : 'black' }} >
                 <div className="container my-4">
                 </div>
                 <h1 style={{ marginTop: "50px" }} >YOUR BAG IS EMPTY</h1>
-                <div className="container text-center my-1" >
-                    <div className="card" style={{ marginTop: "40px" }} >
-                        <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059' }}>
-                            <h2 className="card-title"><b>ShopKart</b></h2>
+                <div className="container text-center my-2"  >
+                    <div className="card" style={{ marginTop: "20px" }} >
+                        <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : 'rgb(249 154 109 / 35%)' }}>
+                            <h2 className="card-title"><b>Bill-Karo</b></h2>
                             <p className=" card-text my-1">~Aashu Singh</p>
                             <p className=" card-text my-1"><strong>Thank You for visiting</strong> </p>
                         </div>
                     </div>
                 </div>
             </div>}
-            {productItem.length > 0 ? <div className="row my-2 mx-2" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
-                <div className="col-1 align-self-center " style={{ padding: "1px" }}><strong>Sno</strong> </div>
+            {productItem.length > 0 ? <div className="row my-2 mx-1" style={{ color: props.mode === 'dark' ? 'white' : 'black',fontSize: "1.4rem" }}>
+                <div className="col-1 align-self-center " style={{ padding: "0px" }}><strong>Sno</strong> </div>
                 <div className="col-3 mx-1"><strong>Item</strong> </div>
                 <div className="col-4 "><strong >Qantity</strong></div>
                 <div className="col-2 mx-1 "><strong>Total</strong> </div>

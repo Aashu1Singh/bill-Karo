@@ -32,18 +32,111 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-#root{
-    /* background-color:#F7F5F2; */
-    height: 100vh;
+#root {
+  font-family: 'Ubuntu', 'Baloo Bhaijaan 2', 'cursive', 'sans-serif';
+  /* background-color:#F7F5F2; */
+  /* height: 110vh; */
 }
 
-.hrElement{
+.navTitle {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 600;
+  /* margin-top:20px; */
+  margin-left: 6%;
+}
+
+.navTitle:hover {
   color: grey;
-  border:dashed;
+}
+
+.navBackcolor {
+  background-color: #ffeddb;
+}
+
+.nav-menu {
+  margin-left: 200px;
+}
+
+
+.nav-menu-a {
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding: 8px 15px 8px 15px;
+  margin: 8px 17px 8px 17px;
+  color: black;
+}
+
+.navCenter{
+  /* margin-left: 350px; */
+  margin-left: 15rem;
+  
+  
+  
+}
+
+@media screen and (max-width: 990px) {
+  .navCenter{
+ 
+  margin-left: 2.5rem;
+  }
+}
+.blackColor {
+
+  color: black;
+}
+
+.toggleBtn {
+
+  align-items: center;
+  justify-content: center;
+}
+
+#SectionHr {
+  color: rgb(28, 5, 5);
+  border: dashed;
+  height: 0px;
+  margin-top: 80px;
   border-width: 3px 0px 0px 0px;
+
+}
+
+.hrElement {
+  color: grey;
+  border: dashed;
+  border-width: 3px 0px 0px 0px;
+}
+
+.alert {
+  height: 140px;
+  margin: 0;
+  padding-top: 100px;
+  padding-left: 0%;
+  padding-right: 0%;
+  /* background-color: #c99058; */
+  color: black;
+}
+
+#add-Title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  line-height: 1.3;
+}
+
+.input-tag {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.input-btn-tag {
+
+  font-size: 1rem;
+  font-weight: 600;
 }
