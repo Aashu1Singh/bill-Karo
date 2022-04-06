@@ -3,7 +3,6 @@ import { Navbar } from './components/Navbar';
 import { ProductList } from './components/ProductList';
 import React, { useState, useEffect } from 'react';
 import Alert from './components/Alert';
-import NavHr from './components/NavHr';
 
 function App() {
   useEffect(() => {

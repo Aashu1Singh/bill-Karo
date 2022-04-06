@@ -91,7 +91,7 @@ export const ProductList = (props) => {
                 <h1 style={{ marginTop: "50px" }} >YOUR BAG IS EMPTY</h1>
                 <div className="container text-center my-2"  >
                     <div className="card" style={{ marginTop: "20px" }} >
-                        <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : 'rgb(249 154 109 / 35%)' }}>
+                        <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#fbe2c8' }}>
                             <h2 className="card-title"><b>Bill-Karo</b></h2>
                             <p className=" card-text my-1">~Aashu Singh</p>
                             <p className=" card-text my-1"><strong>Thank You for visiting</strong> </p>
@@ -99,11 +99,11 @@ export const ProductList = (props) => {
                     </div>
                 </div>
             </div>}
-            {productItem.length > 0 ? <div className="row my-2 mx-1" style={{ color: props.mode === 'dark' ? 'white' : 'black',fontSize: "1.4rem" }}>
+            {productItem.length > 0 ? <div className="row my-2 mx-1" style={{ color: props.mode === 'dark' ? 'white' : 'black',fontSize: "1.3rem" }}>
                 <div className="col-1 align-self-center " style={{ padding: "0px" }}><strong>Sno</strong> </div>
                 <div className="col-3 mx-1"><strong>Item</strong> </div>
                 <div className="col-4 "><strong >Qantity</strong></div>
-                <div className="col-2 mx-1 "><strong>Total</strong> </div>
+                <div className="col-3 mx- "><strong>Amount</strong> </div>
             </div> : ""}
             {productItem.map((product, i) => {
                 return <Product product={product} key={i} addItem={addItem} removeItem={removeItem} increaseQnty={increaseQnty} decreaseQnty={decreaseQnty} index={i} mode={props.mode} />

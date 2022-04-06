@@ -52,12 +52,12 @@
   margin-left: 6%;
 }
 
-.navTitle:hover {
+/* .navTitle:hover {
   color: grey;
-}
+} */
 
 .navBackcolor {
-  background-color: #ffeddb;
+  background-color: #fbe2c8;
 }
 
 .nav-menu {
@@ -84,7 +84,7 @@
 @media screen and (max-width: 990px) {
   .navCenter{
  
-  margin-left: 2.5rem;
+  margin-left: 3.8%;
   }
 }
 .blackColor {
@@ -115,16 +115,16 @@
 
 .alert {
   height: 140px;
-  margin: 0;
+  /* margin: 0; */
   padding-top: 100px;
-  padding-left: 0%;
+  padding-left: 7%;
   padding-right: 0%;
   /* background-color: #c99058; */
   color: black;
 }
 
 #add-Title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 900;
   margin-bottom: 2.5rem;
   line-height: 1.3;
