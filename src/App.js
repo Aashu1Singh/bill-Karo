@@ -6,7 +6,7 @@ import Alert from './components/Alert';
 
 function App() {
   useEffect(() => {
-    document.body.style.backgroundColor = '#FFEDDB'
+    document.body.style.backgroundColor = '#C3E5AE'
   }, [])
   
   const toggleMode = () => {
@@ -15,12 +15,12 @@ function App() {
       setMode('dark')
       setBtnText('Disable dark Mode');
       showAlert("Dark mode has been enabled", "success")
-      document.body.style.backgroundColor = '#C3E5AE'
+      document.body.style.backgroundColor = '#0c303e'
     } else {
       setMode('light')
       setBtnText('Enable dark Mode')
       showAlert("Dark mode has been disabled", "success")
-      document.body.style.backgroundColor = '#F7F5F2'
+      document.body.style.backgroundColor = '#C3E5AE'
     }
   }
   const [mode, setMode] = useState('light');

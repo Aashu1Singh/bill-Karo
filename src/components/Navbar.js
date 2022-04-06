@@ -4,7 +4,7 @@ import React from 'react'
 export const Navbar = (props) => {
     return (
         <>
-            <nav className={`navbar navbar-expand-lg fixed-top navBackcolor text-${props.mode === 'dark' ? 'light' : 'dark'}`}>
+            <nav className={`navbar navbar-expand-lg fixed-top navbarProp navbar-${props.mode=== 'dark'? 'light' : 'dark'} bg-${props.mode=== 'dark'? 'light' : 'dark'}`}>
                 <div className="container-fluid">
                     <span className="navbar-brand navTitle">Bill-Karo</span>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,11 +23,11 @@ export const Navbar = (props) => {
                                 <a className="nav-link active nav-menu-a" href="/">Contact</a>
                             </li>
                         </ul>
-                    <form class="d-flex">
+                    <form class={`d-flex  text-${props.mode=== 'dark'? 'dark' : 'light'}`}>
                             <div>
-                                <label className="form-check-label blackColor" htmlFor="flexSwitchCheckDefault" style={{paddingLeft: "21px", paddingRight: "7px"}}>Dark Mode</label>
+                                <label className="form-check-label " htmlFor="flexSwitchCheckDefault" style={{paddingLeft: "21px", paddingRight: "7px"}}>Dark Mode</label>
                             </div>
-                        <div className="form-check form-switch  " id="navbarSupportedContent">
+                        <div className={`form-check form-switch `} id="navbarSupportedContent">
                             <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" />
                         </div>
                     </form>
