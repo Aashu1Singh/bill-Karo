@@ -21,7 +21,7 @@ export const Product = (props) => {
                 <button className="btn btn-success"style={{fontSize: "1.2rem"}}>{props.product.quantity * props.product.price}</button>
                 </div>
                 <div className="col-1 align-self-center" style={{ padding: "18px" }}>
-                <i className="fa-solid fa-circle-minus "  style={{fontSize: "1.3rem", marginLeft:"0.78rem"}}onClick={() => { props.removeItem(props.index) }}></i>
+                <i className="fa-solid fa-circle-minus "  style={{fontSize: "1.3rem", marginLeft:"0.95rem"}}onClick={() => { props.removeItem(props.index) }}></i>
                 </div>
             </div>
         </>
