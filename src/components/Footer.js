@@ -2,7 +2,7 @@ import React from 'react'
 export const Footer = (props) => {
     return (
         <>
-            <div className="row my-2 " style={{fontSize: "1.2rem"}} >
+            <div className="row my-2 " style={{fontSize: "1.1rem"}} >
                 {/* <div className="col-5"> */}
                 <div className="card w-50" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059', border: "1px solid" }} >
                     <div className="card-body" >
@@ -17,9 +17,9 @@ export const Footer = (props) => {
                 <div className="card w-50" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#d0c0c059', border: "1px solid" }}>
                     <div className="card-body d-flex align-items-center cardBodyCenter">
                         <div className='container'>
-                        <h4 className="card-title"><b>ShopKart</b></h4>
-                        <p className=" card-text my-1">~Aashu Singh</p>
-                        <p className=" card-text my-1"><strong>Thank You for visiting</strong> </p>
+                        <p className="card-title"><b>ShopKart</b></p>
+                        <p className=" card-text ">~Aashu Singh</p>
+                        <p className=" card-text "><strong>Thank You for visiting</strong> </p>
                         </div>
                     </div>
                 </div>
