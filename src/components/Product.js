@@ -20,8 +20,8 @@ export const Product = (props) => {
                 <div className="col-2 align-self-center" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
                 <button className="btn btn-success"style={{fontSize: "1.2rem"}}>{props.product.quantity * props.product.price}</button>
                 </div>
-                <div className="col-1 mx-1 align-self-center" style={{ padding: "18px" }}>
-                <i className="fa-solid fa-circle-minus fa-1.5x"  style={{fontSize: "1.6rem", marginLeft:"0.5rem"}}onClick={() => { props.removeItem(props.index) }}></i>
+                <div className="col-1 align-self-center" style={{ padding: "18px" }}>
+                <i className="fa-solid fa-circle-minus "  style={{fontSize: "1.3rem", marginLeft:"0.78rem"}}onClick={() => { props.removeItem(props.index) }}></i>
                 </div>
             </div>
         </>
