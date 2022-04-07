@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { ProductList } from './components/ProductList';
 import React, { useState, useEffect } from 'react';
 import Alert from './components/Alert';
+import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
@@ -43,6 +44,7 @@ function App() {
       <main className="container ">
         <ProductList mode={mode} showAlert={showAlert} />
       </main>
+      <Footer mode={mode} />
     </>
   );
 }

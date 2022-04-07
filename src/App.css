@@ -48,7 +48,6 @@
 } */
 
 .navbarProp {
-  background-color: #5CDB95;
   padding-top: 0%;
   padding-bottom: 0%;
 }
@@ -133,4 +132,13 @@
 
 .WhiteColor{
   color: white;
+}
+
+#footer{
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+  /* background-color: black;
+  color: white; */
+  width: 100%;
+  height: auto;
 }

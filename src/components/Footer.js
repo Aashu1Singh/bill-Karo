@@ -1,30 +1,39 @@
 import React from 'react'
-export const Footer = (props) => {
+
+const Footer = (props) => {
     return (
-        <>
-            <div className="row my-2 " style={{fontSize: "1.1rem"}} >
-                {/* <div className="col-5"> */}
-                <div className="card w-50" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#5CDB95', border: "2px solid" }} >
-                    <div className="card-body" >
-                        <h5 className="card-title"><b>Total amount to be paid</b></h5>
-                        <p className="card-text">{props.totalAmount}</p>
-                        <p className="btn btn-warning mx-2 my-1" onClick={() => { props.reset() }}><strong style={{ color: "black" }}>Reset Quantity</strong> </p>
-                        <p className="btn btn-success mx-2 my-1">Pay Now</p>
-                    </div>
-                    {/* </div> */}
-                </div>
-                {/* <div className="col-5"> */}
-                <div className="card w-50" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#5CDB95', border: "2px solid" }}>
-                    <div className="card-body d-flex align-items-center cardBodyCenter">
-                        <div className='container'>
-                        <p className="card-title"><b>BIllKaro</b></p>
-                        <p className=" card-text ">~Aashu Singh</p>
-                        <p className=" card-text "><strong>Thanks for visiting</strong> </p>
-                        </div>
-                    </div>
+        <div className={` container-fluid `} style={{ color: props.mode === 'dark' ? 'black' : 'white', backgroundColor: props.mode === 'dark'? 'white': 'black' }}  id='footer'>
+            <div className='container'>
+                <h3 style={{paddingTop: '20px'}}>Bill-Karo</h3>
+            </div>
+            <div className={`container `}>
+            <hr />
+
+            <div className='my-1 row'>
+                <div className='col-4 col-lg-1 col-md-2'>About      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;|</div>
+                <div className='col-8 col-lg-11 col-md-10'> This is a single page application used to make bills of items you purchased anywhere</div>
+            </div>
+            <div className='my-1 row'>
+                <div className='col-4 col-lg-1 col-md-2'>Contact    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</div>
+                <div className='col-8 col-lg-11 col-md-10'> Customer-Care Web-Developer</div>
+            </div>
+            <div className='my-1 row'>
+                <div className='col-4 col-lg-1 col-md-2'>Connect    &nbsp;&nbsp;&nbsp;&nbsp;|</div>
+                <div className='col-8 col-lg-11 col-md-10'>
+                <span>  Email newsletter </span>
+                <span> <i class="fa-brands fa-facebook mx-2"> facebook</i></span>
+                <span> <i class="fa-brands fa-twitter mx-2"> twitter</i></span>
+                <span> <i class="fa-brands fa-google mx-2"> google</i></span>
+                <span> <i class="fa-brands fa-instagram mx-2"> instagram</i></span>
                 </div>
             </div>
-            {/* </div> */}
-        </>
+            <hr />
+            </div>
+            <div className={`my-1 container `}>
+                <span>&#169; Copyright 2022 Hindustan Newspaper</span>
+            </div>
+        </div>
     )
 }
+
+export default Footer
