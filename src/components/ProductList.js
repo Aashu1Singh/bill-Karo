@@ -91,9 +91,9 @@ export const ProductList = (props) => {
                 </div>
                 {/* <div className="container text-center my-2"  >
                     <div className="card" style={{ marginTop: "20px" }} >
-                        <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#5cdb95' }}>
-                            <h2 className="card-title"><b>Bill-Karo ~ Billing made easy</b></h2>
-                            <p className=" card-text my-1">~Aashu Singh</p>
+                    <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#5cdb95' }}>
+                    <h2 className="card-title"><b>Bill-Karo ~ Billing made easy</b></h2>
+                    <p className=" card-text my-1">~Aashu Singh</p>
                             <p className=" card-text my-1"><strong>Thanks for visiting</strong> </p>
                         </div>
                     </div>
@@ -108,6 +108,7 @@ export const ProductList = (props) => {
             {productItem.map((product, i) => {
                 return <Product product={product} key={i} addItem={addItem} removeItem={removeItem} increaseQnty={increaseQnty} decreaseQnty={decreaseQnty} index={i} mode={props.mode} />
             })}
+            <hr style={{color: props.mode === 'dark' ? 'white' : 'black', }} className='mx-1 hrElement' />
             {productItem.length > 0 ? <div className='my-3  text-center'>
                 <BillPage totalAmount={totalAmount} mode={props.mode} reset={reset} />
             </div> : ""}

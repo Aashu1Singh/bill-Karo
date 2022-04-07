@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
-    document.body.style.backgroundColor = '#C3E5AE'
+    document.body.style.backgroundColor = 'white'
   }, [])
   
   const toggleMode = () => {
@@ -21,7 +21,7 @@ function App() {
       setMode('light')
       setBtnText('Enable dark Mode')
       showAlert("Dark mode has been disabled", "success")
-      document.body.style.backgroundColor = '#C3E5AE'
+      document.body.style.backgroundColor = 'white'
     }
   }
   const [mode, setMode] = useState('light');
