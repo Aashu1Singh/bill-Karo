@@ -15,24 +15,11 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 #root {
   font-family: 'Ubuntu', 'Baloo Bhaijaan 2', 'cursive', 'sans-serif';
   /* background-color:#F7F5F2; */
-  /* height: 110vh; */
+  height: 100vh;
 }
 
 .navTitle {
@@ -59,23 +46,23 @@
 
 .nav-menu-a {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   padding: 8px 15px 8px 15px;
   margin: 8px 17px 8px 17px;
   color: white;
 }
 
-.navCenter{
+.navCenter {
   /* margin-left: 350px; */
   margin-left: 15rem;
 }
 
 @media screen and (max-width: 990px) {
-  .navCenter{
-
-  margin-left: 3.8%;
+  .navCenter {
+    margin-left: 3.8%;
   }
 }
+
 .blackColor {
 
   color: black;
@@ -122,19 +109,19 @@
 
 .input-tag {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .input-btn-tag {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 800;
 }
 
-.WhiteColor{
+.WhiteColor {
   color: white;
 }
 
-#footer{
+#footer {
   margin-bottom: 0%;
   padding-bottom: 0%;
   /* background-color: black;

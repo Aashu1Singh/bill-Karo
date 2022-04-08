@@ -23,23 +23,14 @@ export const Navbar = (props) => {
                                 <a className="nav-link active nav-menu-a" href="/">Contact</a>
                             </li>
                         </ul>
-                    <form class={`d-flex  text-${props.mode=== 'dark'? 'dark' : 'light'}`}>
+                    <form class={`d-flex  text-${props.mode=== 'dark'? 'dark' : 'light'}`} style={{fontSize:"1rem"}}>
                             <div>
                                 <label className="form-check-label " htmlFor="flexSwitchCheckDefault" style={{paddingLeft: "21px", paddingRight: "7px"}}>Dark Mode</label>
                             </div>
                         <div className={`form-check form-switch `} id="navbarSupportedContent">
-                            <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" />
+                            <input className="form-check-input" type="checkbox"  onClick={props.toggleMode} role="switch" />
                         </div>
                     </form>
-                    {/* <div className=' fixed-top'>
-                         <NavHr />
-                     </div> */}
-                        {/* <div className="form-check form-switch blackColor " id="navbarSupportedContent">
-                            <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" />
-                            <div>
-                                <label className="form-check-label blackColor" htmlFor="flexSwitchCheckDefault">{props.btnText}</label>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </nav>

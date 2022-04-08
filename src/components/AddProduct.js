@@ -12,7 +12,7 @@ const AddProduct = (props) => {
     const [quantity, setQuantity] = useState('')
     return (
 
-        <form onSubmit={handleSubmit} className='row my-3 mb-2' style={{ color: props.mode === 'dark' ? 'white' : 'black' }} >
+        <form onSubmit={handleSubmit} className='row my-3 mb-2' style={{ color: props.mode === 'dark' ? 'white' : 'black'}} >
             <div className="mb-3 col-md-4"  >
                 <label htmlFor="item" className="form-label input-tag"><strong>Name</strong> </label>
                 <input type="text" className="form-control" id="item" aria-describedby="emailHelp" name="name" onChange={(e) => { setName(e.currentTarget.value); }} value={name} />

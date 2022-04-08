@@ -79,7 +79,7 @@ export const ProductList = (props) => {
     return (
         <>
             <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}  >
-                <h1 className='text-center' id='add-Title' style={{ color: props.mode === 'dark' ? 'white' : 'black', padding: "15px" }} >Add item in your bag</h1>
+                <h1 className='text-center' id='add-Title' style={{ color: props.mode === 'dark' ? 'white' : 'black', padding: "15px" , fontSize:"3.3rem"}} >Add item in your bag</h1>
             </div>
             <AddProduct addItem={addItem} mode={props.mode} />
             <div className=" align-self-center ">
@@ -89,18 +89,9 @@ export const ProductList = (props) => {
             <div className="container my-5">
                 <h1 style={{ marginTop: "130px", marginBottom:"100px" }} >YOUR BAG IS EMPTY</h1>
                 </div>
-                {/* <div className="container text-center my-2"  >
-                    <div className="card" style={{ marginTop: "20px" }} >
-                    <div className="card-body" style={{ color: props.mode === 'dark' ? 'white' : 'black', backgroundColor: props.mode === 'dark' ? 'grey' : '#5cdb95' }}>
-                    <h2 className="card-title"><b>Bill-Karo ~ Billing made easy</b></h2>
-                    <p className=" card-text my-1">~Aashu Singh</p>
-                            <p className=" card-text my-1"><strong>Thanks for visiting</strong> </p>
-                        </div>
-                    </div>
-                </div> */}
             </div>}
             {productItem.length > 0 ? <div className="row my-2 mx-1" style={{color: props.mode === 'dark' ? 'white' : 'black',fontSize: "1.3rem" }}>
-                <div className="col-1 align-self-center " style={{ padding: "0px" }}><strong>Sno</strong> </div>
+                <div className="col-1 align-self-center " style={{ padding: "0px",fontSize:"1.2rem" }}><strong>Sno</strong> </div>
                 <div className="col-3 mx-1"><strong>Item</strong> </div>
                 <div className="col-4 "><strong >Qantity</strong></div>
                 <div className="col-3 mx- "><strong>Amount</strong> </div>
