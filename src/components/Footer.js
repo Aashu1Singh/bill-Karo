@@ -30,7 +30,7 @@ const Footer = (props) => {
             <hr />
             </div>
             <div className={`my-1 container `}>
-                <span>&#169; Copyright 2022 Hindustan Newspaper</span>
+                <span>&#169; Copyright 2022 Hindustan </span>
             </div>
         </div>
     )
